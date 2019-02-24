@@ -1,26 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
-    <title>NodeJS Starter Application</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
+<head>
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Hello World!</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
-  </body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Chairman Speech</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/stylesheets/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Chairman</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container persoContainer">
+    <div class="row">
+      <div class="col-6">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Les mots positifs</span>
+          </div>
+          <textarea class="form-control" aria-label="Les mots positifs" id="PositifWords"></textarea>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Les mots négatifs</span>
+          </div>
+          <textarea class="form-control" aria-label="Les mots négatifs" id="NegatifWords"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Ton texte</span>
+          </div>
+          <textarea class="form-control" aria-label="Ton texte" id="InputText"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <button class="offset-4 col-4" type="button" name="button" id="FindButton">Rechercher</button>
+    </div>
+    <div class="row">
+      <div class="offset-3 col-6 text-center" id="result">
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/find.js"></script>
+
+</body>
 
 </html>

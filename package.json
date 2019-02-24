@@ -6,11 +6,12 @@
 		"start": "node app.js"
 	},
 	"dependencies": {
-		"express": "4.15.x",
-		"cfenv": "1.0.x"
+		"cfenv": "1.0.x",
+		"express": "^4.16.4",
+		"node": "^11.10.0"
 	},
 	"repository": {},
 	"engines": {
 		"node": "6.x"
-	} 
+	}
 }
