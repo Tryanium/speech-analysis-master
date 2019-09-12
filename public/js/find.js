@@ -32,12 +32,16 @@ function filterVoid(array, callback) {
 }
 
 function count(text) {
-  let PositifWord = $('#PositifWords').val().toLowerCase().split(" ");
-  let NegatifWord = $('#NegatifWords').val().toLowerCase().split(" ");
-  let YesNoWords = $('#YesNoWords').val().toLowerCase().split(" ");
+  let PositifWord = $('#PositifWords').val().toLowerCase().replace(/\r?\n|\r/g," ").split(" ");
+  console.log(PositifWord);
+  let NegatifWord = $('#NegatifWords').val().toLowerCase().replace(/\r?\n|\r/g," ").split(" ");
+  console.log(NegatifWord);
+  let YesNoWords = $('#YesNoWords').val().toLowerCase().replace(/\r?\n|\r/g," ").split(" ");
+  console.log(YesNoWords);
   let PositifCount = 0;
   let NegatifCount = 0;
   let YesNoCount = 0;
+
   text.forEach(function (mot) {
     if(jQuery.inArray(mot, PositifWord ) != -1) {
       PositifCount += 1;
