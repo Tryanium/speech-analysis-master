@@ -7,13 +7,18 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
-
+var bodyParser = require('body-parser');
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
 var cfenv = require('cfenv');
 
 // create a new express server
 var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var pdf = require('./routes/ReadPDF');
+app.use('/pdf', pdf);
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
