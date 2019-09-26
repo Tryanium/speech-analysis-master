@@ -2,7 +2,15 @@
   margin-top: 2%;
 }
 
-
 textarea{
   resize: none;
+}
+
+#ImgProfil{
+  width: 9em;
+  border-radius: 50%;
+}
+
+.row{
+  margin-bottom: 2%;
 }
