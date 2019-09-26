@@ -14,11 +14,14 @@ var cfenv = require('cfenv');
 
 // create a new express server
 var app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({ limit: '40mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '40mb', parameterLimit: 1000000 }));
 
 var pdf = require('./routes/ReadPDF');
+var syllable = require('./routes/syllable');
+
 app.use('/pdf', pdf);
+app.use('/syllable', syllable);
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
