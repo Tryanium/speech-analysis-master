@@ -23,8 +23,16 @@ var syllable = require('./routes/syllable');
 app.use('/pdf', pdf);
 app.use('/syllable', syllable);
 
+
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+app.get('/', function (req, res, next) {
+  res.render('index');
+});
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
