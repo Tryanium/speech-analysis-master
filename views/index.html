@@ -8,12 +8,12 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Speech Analysis</title>
+  <title>Text Analysis</title>
 
   <!-- Bootstrap core CSS -->
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/stylesheets/style.css" rel="stylesheet">
-<script data-ad-client="ca-pub-5835846113111453" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-5835846113111453" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
@@ -21,70 +21,67 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Speech analysis</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+      <a class="navbar-brand" href="#">Text analysis</a>
     </div>
   </nav>
 
   <!-- Page Content -->
   <div class="container persoContainer">
-    <div class="row">
-      <div class="col">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Les mots positifs</span>
-          </div>
-          <textarea class="form-control" aria-label="Les mots positifs" id="PositifWords"></textarea>
-        </div>
-      </div>
-      <div class="col">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Les mots négatifs</span>
-          </div>
-          <textarea class="form-control" aria-label="Les mots négatifs" id="NegatifWords"></textarea>
-        </div>
-      </div>
-      <div class="col">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Les mots incertains</span>
-          </div>
-          <textarea class="form-control" aria-label="Les mots incertains" id="YesNoWords"></textarea>
-        </div>
-      </div>
-    </div>
-    <div class="" id="TextPersoOrPDF">
-      <p class="text-center">Tu peux copier coller ton text dans la zone ou <strong>À VENIR : </strong> upload un PDF ici</p>
-      <input id="uploadFile" type="file" name="upload" accept="application/pdf" />
+    <form>
       <div class="row">
-        <div class="col-12">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Ton texte</span>
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="PositifWords">Positif words</label>
+                <textarea class="form-control" aria-label="Les mots positifs" id="PositifWords" rows="4"></textarea>
+              </div>
             </div>
-            <textarea class="form-control" aria-label="Ton texte" id="InputText"></textarea>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <button class="offset-4 col-4" type="button" name="button" id="FindButton">Rechercher</button>
-    </div>
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="PositifWords">Negatif words</label>
+                <textarea class="form-control" aria-label="Les mots négatifs" id="NegatifWords" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="PositifWords">Incertain words</label>
+                <textarea class="form-control" aria-label="Les mots incertains" id="YesNoWords" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+        </div> <!-- FIN COL -->
+      </div> <!-- FIN ROW -->
+      <div class="row">
+        <div class="col-8">
+          <p class="text-center">Tu peux copier coller ton text dans la zone ou <strong>À VENIR : </strong> upload un PDF ici</p>
+        </div>
+        <div class="col-4">
+          <input id="uploadFile" type="file" name="upload" accept="application/pdf" />
+        </div>
+        <div class="col-12">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="InputText">Your text</label>
+                <textarea class="form-control" rows="10" id="InputText"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- FIN ROW -->
+      <div class="row">
+        <button class="offset-4 col-4 btn btn-primary" type="submit" name="button" id="FindButton">Rechercher</button>
+      </div> <!-- FIN ROW -->
+    </form>
     <!-- RESULT -->
     <div class="row">
       <div class="col text-center" id="resultPosNeg"></div>
@@ -95,7 +92,7 @@
     <div class="row">
       <div class="col text-center" id="syllable"></div>
     </div>
-      <!-- RESULT -->
+    <!-- RESULT -->
   </div>
 
   <!-- Bootstrap core JavaScript -->
